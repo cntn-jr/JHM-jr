@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+$font:'Noto Sans JP', sans-serif;
+.companies_container {
+    margin-left: 15%;
+    .companies_list {
+        display: grid;
+        flex-wrap: wrap;
+        list-style: none;
+        grid-template-columns: 550px 550px;
+        &:hover {
+            text-decoration: none;
+        }
+        .companies_elements {
+            border: 0.5px solid #ccc;
+            border-radius: 5px;
+            margin: 18px;
+            height: 680px;
+            //タイトルを真ん中に持ってくる
+            text-align: center;
+            position: relative;
+            &:hover {
+                text-decoration: none;
+            }
+            
+            //会社名
+            .companies_link{
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .companies_name {
+                font-size: 2rem;
+                color: #000;
+                margin-top: 20px;
+                font-family: $font;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            //締切日
+            .deadline {
+                font-size: 1.2rem;
+                text-align: right;
+                margin-right: 30px;
+                color: #000;
+                font-family: $font;
+            }
+            //写真
+            .companies_pic {
+                width: 460px;
+            }
+            //ボタン
+            #edit_btn {
+                float: right;
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                right: 30px;
+            }
+            #delete_btn{
+                float: right;
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                right: 105px;
+                
+            }
+            #entry_btn{
+                margin-top: 40px;
+            }
+            #cancel_btn{
+                margin-top: 40px;
+            }
+
+        }
+    }
+} 
