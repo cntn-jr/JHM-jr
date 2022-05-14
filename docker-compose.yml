@@ -5,7 +5,7 @@ volumes:
 
 services:
   app:
-    container_name: app
+    container_name: app-jr
     # hostname: app
     build:
       context: .
@@ -35,7 +35,7 @@ services:
   #     - web
 
   web:
-    container_name: web
+    container_name: web-jr
     hostname: web
     build:
       context: .
@@ -48,7 +48,7 @@ services:
       - ./src/:/var/www/html
 
   db:
-    container_name: db
+    container_name: db-jr
     build:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
@@ -64,7 +64,7 @@ services:
       - mysql-volume:/var/lib/mysql
 
   db-testing:
-    container_name: db-testing
+    container_name: db-testing-jr
     build:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
