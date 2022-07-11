@@ -2,7 +2,7 @@
     <div class="show-component">
         <div class="show-left-part">
             <div class="show-pdf">
-                <img :src="'http://localhost:8000/storage/pdf_image/'+company.image_path+'.jpg'" class="companies_pic" v-if="company.image_path">
+                <img :src="'/storage/pdf_image/'+company.image_path+'.jpg'" class="companies_pic" v-if="company.image_path">
                 <img src="/img/no_image_square.jpg" class="companies_pic" v-else>
             </div>
         </div>
